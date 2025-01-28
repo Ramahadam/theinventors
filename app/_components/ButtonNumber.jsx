@@ -1,21 +1,24 @@
-export default function ButtonNumber() {
+'use client';
+import { useState } from 'react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
+export default function ButtonNumber({ icon = '' }) {
+  const [phone, setPhone] = useState('+81(123)456-78-90');
+
   return (
-    <button className="bg-black outline-none text-white rounded-[15px] px-[20px] py-[16px] flex items-center">
-      <select
-        name="countryCode"
-        id="countryCode"
-        className="bg-black outline-none"
-      >
-        <option value="+81">+81</option>
-      </select>
-      <input
-        type="number"
-        placeholder="(123)456-78-90"
-        className="text-white placeholder:text-white ml-[15px] bg-black flex-grow w-full outline-none"
+    <div className="bg-black text-white rounded-[1.5rem] px-[2rem] py-[1.6rem] flex items-center">
+      <PhoneInput
+        country={'jp'}
+        value={phone}
+        onChange={setPhone}
+        inputProps={{
+          placeholder: '+81(123)456-78-90',
+          className:
+            'bg-black text-white border-none outline-none text-center text-p-sm px-2 py-1',
+        }}
       />
-      <span className="h-4 w-4 rounded-full border-2 text-xs flex items-center justify-center bg-black">
-        i
-      </span>
-    </button>
+      {icon}
+    </div>
   );
 }

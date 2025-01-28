@@ -1,6 +1,8 @@
-function HeadingBig({ children }) {
+function HeadingBig({ children, className }) {
   return (
-    <h1 className="text-3xl font-medium  mb-[20px] mt-[40px]">{children}</h1>
+    <h1 className={`text-h2 font-medium  mb-[20px] mt-[40px] ${className}`}>
+      {children}
+    </h1>
   );
 }
 

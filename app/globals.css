@@ -1,11 +1,67 @@
-@import 'swiper/css';
+/* @import 'swiper/css';
 @import 'swiper/css/pagination';
-@import 'swiper/css/navigation';
+@import 'swiper/css/navigation'; */
+@import 'react-phone-input-2/lib/style.css';
+@import './_styles/PhoneInputCustom.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Set root font size to 10px */
+html {
+  font-size: 62.5%; /* This makes 1rem = 10px */
+}
+
+/* Reset body font size */
 body {
+  @apply text-p-base;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mySwiper .swiper-slide:not(.swiper-slide-active) .card {
+  background-color: #959595;
+}
+
+.swiper.dotsSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.dotsSwiper.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: red;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotsSwiper .dotsSwiperswiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dotsSwiper {
+  position: relative;
+  padding-bottom: 30px; /* Adjust this value to control space between slider and dots */
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background: #000 !important; /* Customize dot color */
+}
+
+.swiper-pagination-bullet-active {
+  background: #000; /* Customize active dot color */
 }

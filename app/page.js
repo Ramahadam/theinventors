@@ -1,10 +1,9 @@
 'use client';
-import Image from 'next/image';
 import Card from './_components/Card';
-import ButtonNumber from './_components/ButtonNumber';
-import HeadingBig from './_components/HeadingBig';
 import ImageSlider from './_components/ImageSlider';
 import PhoneNumberSection from './_components/PhoneNumberSection';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 const images = [
   {
@@ -28,16 +27,16 @@ const images = [
 export default function Home() {
   return (
     <div>
-      <Card>
+      <Card className="mt-[2rem]">
         <div className="card-header flex flex-col items-center">
           <ImageSlider images={images} />
 
-          <p className="text-xl font-medium">
+          <p className="text-p-lg font-medium">
             Experience the two <span className="block">teacher advantage</span>
           </p>
         </div>
 
-        <PhoneNumberSection />
+        <PhoneNumberSection icon={<FontAwesomeIcon icon={faInfoCircle} />} />
       </Card>
     </div>
   );

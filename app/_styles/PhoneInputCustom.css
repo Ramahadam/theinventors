@@ -1,0 +1,32 @@
+.react-tel-input .flag-dropdown {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.react-tel-input .country-list {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.react-tel-input .country-list .country {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.react-tel-input .country-list .country:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.react-tel-input .country-list .country:active {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+}

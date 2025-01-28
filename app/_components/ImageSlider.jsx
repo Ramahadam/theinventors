@@ -32,7 +32,7 @@ const ImageSlider = ({ images }) => {
       </div>
 
       {/* Slider Indicators */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <button
             onClick={() => setCurrentIndex(index)}
